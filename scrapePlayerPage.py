@@ -44,11 +44,12 @@ def get_player_headshot(soup, player_id: str) -> str:
             img = div.find('img', src=True)
             if img and 'headshots' in img['src'] and player_id in img['src']:
                 return img['src']
-        logger.warning(f"No headshot found for player {player_id}")
-        return ""  
+        logger.warning(f"No headshot found for player {player_id}, using fallback image.")
+        return "static/images/headshot_fallback.png"  # fallback image
     except Exception as e:
         logger.error(f"Error in get_player_headshot: {e}")
-        return ""
+        return "static/images/headshot_fallback.png"  # fallback image on error
+
 
 def scrape_html_table(soup, table_id):
     if not soup:

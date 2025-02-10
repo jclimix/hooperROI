@@ -10,9 +10,15 @@ def format_to_dollars(amount: float) -> str:
 
 def pct_diff(old: float, new: float) -> str:
     """Calculates the percentage difference between two values."""
-    diff: float = ((new - old) / abs(old)) * 100
-    sign: str = "+" if diff >= 0 else "-"
-    return f"{sign}{abs(diff):.2f}"
+    if old == 0:
+        return "0"  # Return 0 if the old value is 0 to avoid division by zero
+    try:
+        diff: float = ((new - old) / abs(old)) * 100
+        sign: str = "+" if diff >= 0 else "-"
+        return f"{sign}{abs(diff):.2f}"
+    except Exception as e:
+        logger.error(f"Error calculating percentage difference: {e}")
+        return "0"
 
 def calc_nba_payroll(total_teams: int, salary_cap: float) -> float:
     """Calculates the total NBA payroll."""

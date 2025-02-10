@@ -138,7 +138,11 @@ def convert_nba_season_to_year(season):
         return None
     
 def money_to_float(s):
-    return float(s.replace("$", "").replace(",", ""))
+    try:
+        return float(s.replace("$", "").replace(",", ""))
+    except Exception as e:
+        logger.error(f"Error converting money string to float: {e}")
+        return 0.0
 
 if __name__ == '__main__':
         

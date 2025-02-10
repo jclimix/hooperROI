@@ -1,0 +1,12 @@
+2025-02-10 03:02:36.387 | INFO     | __main__:<module>:107 - Starting Flask app...
+2025-02-10 03:02:48.087 | INFO     | __main__:search_player:33 - Searching for player: Scotty Pippen Jr., Season: 2023-24
+2025-02-10 03:05:56.555 | INFO     | __main__:search_player:33 - Searching for player: Scotty Pippen Jr., Season: 2023-24
+2025-02-10 03:06:08.685 | INFO     | __main__:<module>:107 - Starting Flask app...
+2025-02-10 03:06:19.969 | INFO     | __main__:search_player:33 - Searching for player: Scotty Pippen Jr., Season: 2023-24
+2025-02-10 03:06:20.546 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '(TW)'
+2025-02-10 03:06:20.571 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 03:06:20.572 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 03:09:35.601 | INFO     | __main__:search_player:33 - Searching for player: Scotty Pippen Jr., Season: 2023-24
+2025-02-10 03:09:36.165 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '(TW)'
+2025-02-10 03:09:36.166 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 03:09:36.167 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
