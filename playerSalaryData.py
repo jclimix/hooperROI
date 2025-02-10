@@ -30,8 +30,10 @@ def calc_value_of_win_share(nba_payroll: float, total_wins: int) -> float:
 
 def calc_salary_per_win_share(salary: float, win_shares: float) -> float:
     """Calculates how much a player earns per win share."""
-    if win_shares != 0.0:
+    if win_shares != 0.0 and win_shares > 0.0:
         return float(salary) / float(win_shares)
+    elif win_shares < 0.0:
+        return 0.0
     else:
         return 0.0
 

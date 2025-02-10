@@ -76,6 +76,9 @@ def search_player():
     try:
         contract_value_rating = salary_analysis_df.loc[salary_analysis_df['Season'] == season, 'Contract Value Rating'].values[0]
         salary = salary_analysis_df.loc[salary_analysis_df['Season'] == season, 'Salary'].values[0]
+        salary_per_ws = salary_analysis_df.loc[salary_analysis_df['Season'] == season, 'Salary Per WS'].values[0]
+        
+        logger.info(f"Salary Per WS: {salary_per_ws}, Salary: {salary}")
         logger.info(f"CVR: {contract_value_rating}, Salary: {salary}")
     except Exception as e:
         logger.error(f"Error extracting salary data: {e}")

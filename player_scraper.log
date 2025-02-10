@@ -27,3 +27,56 @@
 2025-02-10 03:11:51.987 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 777, Total Teams: 30
 2025-02-10 03:11:51.989 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
 2025-02-10 03:11:51.990 | INFO     | __main__:search_player:79 - CVR: 4.62, Salary: $1,119,563.00
+2025-02-10 11:39:45.317 | INFO     | __main__:<module>:107 - Starting Flask app...
+2025-02-10 11:40:04.964 | INFO     | __main__:search_player:33 - Searching for player: Gabe Vincent, Season: 2023-24
+2025-02-10 11:40:06.632 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:40:06.635 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-10 11:40:06.636 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2019-20 Salary Cap: $109,140,000 
+2025-02-10 11:40:06.969 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:40:06.971 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-10 11:40:06.974 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2020-21 Salary Cap: $109,140,000 
+2025-02-10 11:40:07.270 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:40:07.272 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2021-22 Salary Cap: $112,414,000 
+2025-02-10 11:40:07.553 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:40:07.555 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 11:40:07.871 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:40:07.872 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-10 11:40:08.864 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 780, Total Teams: 30
+2025-02-10 11:40:08.867 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-10 11:40:08.871 | INFO     | __main__:search_player:79 - CVR: 5.0, Salary: $10,500,000.00
+2025-02-10 11:44:49.917 | INFO     | __main__:<module>:110 - Starting Flask app...
+2025-02-10 11:45:12.115 | INFO     | __main__:search_player:33 - Searching for player: Gabe Vincent, Season: 2023-24
+2025-02-10 11:45:13.148 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:45:13.149 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-10 11:45:13.150 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2019-20 Salary Cap: $109,140,000 
+2025-02-10 11:45:13.335 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:45:13.337 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-10 11:45:13.338 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2020-21 Salary Cap: $109,140,000 
+2025-02-10 11:45:13.492 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:45:13.493 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2021-22 Salary Cap: $112,414,000 
+2025-02-10 11:45:13.651 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:45:13.651 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 11:45:13.845 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:45:13.845 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-10 11:45:14.487 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 780, Total Teams: 30
+2025-02-10 11:45:14.489 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-10 11:45:14.491 | INFO     | __main__:search_player:81 - Salary Per WS: $-105,000,000.00, Salary: $10,500,000.00
+2025-02-10 11:45:14.492 | INFO     | __main__:search_player:82 - CVR: 5.0, Salary: $10,500,000.00
+2025-02-10 11:46:56.440 | INFO     | __main__:<module>:110 - Starting Flask app...
+2025-02-10 11:47:13.173 | INFO     | __main__:search_player:33 - Searching for player: Gabe Vincent, Season: 2023-24
+2025-02-10 11:47:14.782 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:47:14.784 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-10 11:47:14.786 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2019-20 Salary Cap: $109,140,000 
+2025-02-10 11:47:15.108 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:47:15.110 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-10 11:47:15.111 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2020-21 Salary Cap: $109,140,000 
+2025-02-10 11:47:15.410 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:47:15.411 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2021-22 Salary Cap: $112,414,000 
+2025-02-10 11:47:15.708 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:47:15.710 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 11:47:16.046 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:47:16.048 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-10 11:47:17.046 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 780, Total Teams: 30
+2025-02-10 11:47:17.050 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-10 11:47:17.053 | INFO     | __main__:search_player:81 - Salary Per WS: $0.00, Salary: $10,500,000.00
+2025-02-10 11:47:17.054 | INFO     | __main__:search_player:82 - CVR: 0.0, Salary: $10,500,000.00
