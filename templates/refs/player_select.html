@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete Dropdown with CSV Data</title>
+    <script>
+        let players = [];
+        
+        async function loadCSV(season) {
+            const response = await fetch(`${season}_player_data.csv`);
+            const data = await response.text();
+            const rows = data.split('\n').slice(1);
+            
+            players = rows.map(row => row.split(',')[0].trim()).filter(name => name);
+            filterPlayers();
+        }
+
+        function filterPlayers() {
+            const input = document.getElementById('playerDropdownInput').value.toLowerCase();
+            const datalist = document.getElementById('playerDropdown');
+            datalist.innerHTML = '';
+            
+            const filtered = players.filter(name => name.toLowerCase().includes(input)).slice(0, 10);
+            
+            filtered.forEach(name => {
+                let option = document.createElement('option');
+                option.value = name;
+                datalist.appendChild(option);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const seasonDropdown = document.getElementById('seasonDropdown');
+            for (let year = 2016; year <= 2025; year++) {
+                let option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                seasonDropdown.appendChild(option);
+            }
+            
+            seasonDropdown.addEventListener('change', (event) => {
+                loadCSV(event.target.value);
+            });
+            
+            document.getElementById('playerDropdownInput').addEventListener('input', filterPlayers);
+        });
+    </script>
+</head>
+<body>
+    <label for="seasonDropdown">Select Season:</label>
+    <select id="seasonDropdown">
+        <option value="">-- Select Season --</option>
+    </select>
+    <br><br>
+    <label for="playerDropdownInput">Select Player:</label>
+    <input list="playerDropdown" id="playerDropdownInput" placeholder="Type to search...">
+    <datalist id="playerDropdown"></datalist>
+</body>
+</html>

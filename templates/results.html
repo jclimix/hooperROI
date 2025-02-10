@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ player_name }} ({{ season }}) | HooperROI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+</head>
+
+<body>
+    <div class="logo-wrapper">
+        <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Home" class="logo">
+        </a>
+    </div>
+
+    <div class="container">
+        {% if error %}
+        <h2 style="color: red;">{{ error }}</h2>
+        {% else %}
+        <!-- Player Info Section -->
+        <div class="player-container">
+            <!-- Player Image -->
+            <div class="player-image-container">
+                {% if player_headshot %}
+                <a href="{{ url }}" target="_blank">
+                    <img src="{{ player_headshot }}" alt="{{ player_name }} Headshot" class="player-image">
+                </a>
+                {% endif %}
+            </div>
+
+            <!-- Player Details -->
+            <div class="player-info">
+                <p class="season-label">{{ season }}</p>
+                <h1 class="player-name">{{ player_name }}</h1>
+                <p class="player-details"><strong>Age: {{ age }}</strong> | <strong>Position: {{ position }}</strong> |
+                    <strong>Team: {{ team
+                        }}</strong>
+                </p>
+            </div>
+
+            <!-- Salary & Contract Value Section -->
+            <div class="salary-contract-container">
+                <!-- Salary Container -->
+                <div class="salary-container">
+                    <p class="salary-label">Salary</p>
+                    <p class="salary-value">{{ salary }}</p>
+                </div>
+
+                <!-- Contract Value Rating Container -->
+                <div class="contract-value-container">
+                    <p class="contract-label">Contract Value Rating</p>
+                    <div class="contract-rating">
+                        <p class="contract-value">{{ contract_value_rating }}</p>
+                        <img src="{{ url_for('static', filename='images/star.png') }}" alt="Contract Value Rating Star"
+                            class="star-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="tab-container">
+                <button class="tab-btn active" onclick="showTab('contract_roi')">Contract ROI</button>
+                <button class="tab-btn" onclick="showTab('pergame')">Per-Game Stats</button>
+                <button class="tab-btn" onclick="showTab('advanced')">Advanced Stats</button>
+            </div>
+
+            <!-- Tables -->
+            <div id="contract_roi" class="tab-content active">
+                {{ salary_analysis_html | safe }}
+            </div>
+            <div id="pergame" class="tab-content">
+                {{ pergame_html | safe }}
+            </div>
+            <div id="advanced" class="tab-content">
+                {{ adv_stats_html | safe }}
+            </div>
+
+            <p><a href="{{ url }}">View Full Stats on Basketball Reference</a></p>
+            {% endif %}
+
+            <a href="{{ url_for('index') }}" class="button">Search Another Player</a>
+        </div>
+
+        <script>
+            // func to format currency values
+            function formatCurrency(value) {
+                let num = parseFloat(value.replace(/[$,]/g, '')); // remove "$" and commas
+
+                if (!isNaN(num)) {
+                    if (num >= 1_000_000) {
+                        return `$${(num / 1_000_000).toFixed(2)}M`; // format as millions
+                    } else if (num >= 1_000) {
+                        return `$${(num / 1_000).toFixed(0)}K`; // format as thousands
+                    } else {
+                        return `$${num.toFixed(2)}`; // keep regular format for small numbers
+                    }
+                }
+                return value; // return original value if not a valid number
+            }
+
+            // function to apply formatting to Contract ROI table and persist it
+            function formatContractROITable() {
+                const contractTable = document.getElementById('contract_roi');
+                if (contractTable) {
+                    const cells = contractTable.querySelectorAll('td');
+
+                    cells.forEach(cell => {
+                        // only format if it's not already formatted
+                        if (cell.textContent.includes('$') && !cell.dataset.formatted) {
+                            cell.textContent = formatCurrency(cell.textContent);
+                            cell.dataset.formatted = "true"; // mark cell as formatted to prevent reformatting
+                        }
+                    });
+                }
+            }
+
+            // function to handle tab switching
+            function showTab(tabName) {
+                // hide all tab contents
+                document.querySelectorAll('.tab-content').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+
+                // show selected tab
+                document.getElementById(tabName).classList.add('active');
+
+                // update active tab button
+                document.querySelectorAll('.tab-btn').forEach(button => {
+                    button.classList.remove('active');
+                });
+
+                event.currentTarget.classList.add('active');
+
+                // make sure Contract ROI table formatting persists when returning to the tab
+                if (tabName === 'contract_roi') {
+                    formatContractROITable();
+                }
+            }
+
+            // run necessary functions on page load
+            window.onload = function () {
+                formatContractROITable();
+                 // make sure Contract ROI table is formatted immediately
+                highlightSeasonRow();
+            };
+
+            function highlightSeasonRow() {
+                const season = "{{ season }}"; // get the season from the template
+                const tables = document.querySelectorAll("table"); // select all tables
+
+                tables.forEach(table => {
+                    const rows = table.querySelectorAll("tr");
+
+                    rows.forEach(row => {
+                        const cells = row.querySelectorAll("td"); // get all table cells in the row
+                        cells.forEach(cell => {
+                            if (cell.textContent.trim() === season) { // check if the season matches
+                                row.style.color = "#ffdd57"; // change text color for the whole row
+                                row.style.backgroundColor = "#1a1a1a";
+                            }
+                        });
+                    });
+                });
+            }
+        </script>
+
+
+</body>
+
+</html>

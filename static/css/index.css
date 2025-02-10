@@ -1,0 +1,175 @@
+/* Import Oswald from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Main Container - Wider & More Spaced */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 45px; /* More padding */
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 470px; /* Slightly wider */
+}
+
+/* Logo Styling */
+.logo-container img {
+    width: 290px; /* Bigger logo */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Buttons - Wider, More Padding, Centered */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 30px;
+}
+
+.button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 28px; /* More padding for larger buttons */
+    font-size: 24px; /* Increased font size */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* Make buttons take full width */
+    max-width: 220px; /* Limit max width */
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* Inputs and Dropdowns - Wider */
+.input-group {
+    margin: 20px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 18px; /* Slightly larger labels */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+select, input {
+    width: 100%;
+    padding: 14px; /* Bigger padding */
+    border-radius: 6px;
+    border: none;
+    font-size: 18px; /* Slightly larger input font */
+    font-family: 'Oswald', sans-serif;
+    outline: none;
+}
+
+/* Submit Button - Wider */
+.submit-btn {
+    width: 100%;
+    background: #ff4757;
+    margin-top: 25px;
+    font-size: 20px; /* Larger font */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.submit-btn:hover {
+    background: #e84118;
+}
+
+/* ================================= */
+/* 📱 Mobile Styles (Screen ≤ 768px) */
+/* ================================= */
+@media screen and (max-width: 768px) {
+    /* Adjust body styling for better spacing */
+    body {
+        height: auto; /* Allows content to determine the height */
+        min-height: 100vh; /* Ensures it still fills the screen when needed */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Aligns content to the top */
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Main container adapts for smaller screens */
+    .container {
+        width: 90%; /* Adjusts to fit smaller screens */
+        max-width: 100%;
+        padding: 30px; /* Reduce padding to save space */
+        border-radius: 8px;
+    }
+
+    /* Center and resize logo */
+    .logo-container img {
+        width: 300px; /* Adjust logo size */
+        margin-bottom: 15px;
+    }
+
+    /* Stack buttons vertically for better mobile usability */
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Make buttons full-width for better tapping */
+    .button {
+        width: 100%;
+        max-width: 100%;
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    /* Adjust input fields and labels for readability */
+    .input-group {
+        margin: 15px 0;
+        text-align: left;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    select, input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Submit Button - Full Width */
+    .submit-btn {
+        width: 100%;
+        font-size: 18px;
+        padding: 14px;
+    }
+}
