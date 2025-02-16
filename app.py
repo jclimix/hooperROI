@@ -7,7 +7,7 @@ from playerSalaryData import *
 from loguru import logger
 
 app = Flask(__name__)
-
+ 
 logger.add("logs/app.log", rotation="10MB", retention="10 days", level="INFO")
 
 # folder where CSV files are stored
