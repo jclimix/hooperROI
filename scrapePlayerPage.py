@@ -10,6 +10,7 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 logger.add("logs/player_scraper.log", rotation="10MB", level="INFO")
 
 def get_player_id(year, player_name):
+    """Get the salary cap for a given season from a preloaded DataFrame."""
     try:
         df = pd.read_csv(f"static/data/{year}_player_data.csv")
         player_row = df[df["Player Name"].str.lower() == player_name.lower()]
