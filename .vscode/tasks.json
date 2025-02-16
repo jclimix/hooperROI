@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Semantic Release",
+      "type": "shell",
+      "command": "npx semantic-release",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "env": {
+          "GITHUB_TOKEN": "${env:GITHUB_TOKEN}"
+        }
+      }
+    }
+  ]
+}
