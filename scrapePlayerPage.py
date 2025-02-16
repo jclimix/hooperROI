@@ -7,7 +7,7 @@ from loguru import logger
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
-logger.add("player_scraper.log", rotation="10MB", level="INFO")
+logger.add("logs/player_scraper.log", rotation="10MB", level="INFO")
 
 def get_player_id(year, player_name):
     try:

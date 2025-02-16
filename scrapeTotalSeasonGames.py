@@ -3,6 +3,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import os
 from loguru import logger
+from io import StringIO
 
 CURRENT_SEASON = "2024-25"
 LEAGUE_WINS_CSV = "static/data/league_wins_teams.csv"
@@ -44,7 +45,7 @@ def scrape_total_league_wins_and_teams(season):
         if not table:
             raise ValueError(f"Table with id '{table_id}' not found on the page.")
 
-        df = pd.read_html(str(table))[0]
+        df = pd.read_html(StringIO(str(table)))[0]
         if "W" not in df.columns:
             raise ValueError(f"Column 'W' not found in the table '{table_id}'. Check table structure.")
 

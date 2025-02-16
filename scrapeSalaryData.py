@@ -6,12 +6,12 @@ import chardet
 import warnings
 from loguru import logger
 
-logger.add("salary_scraper.log", rotation="10MB", level="INFO")
+logger.add("logs/salary_scraper.log", rotation="10MB", level="INFO")
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 def get_player_id(year, player_name):
-        
+    """Get the player ID from the player data CSV for a given year."""
     df = pd.read_csv(f"static/data/{year}_player_data.csv")
     player_row = df[df["Player Name"].str.lower() == player_name.lower()]
     if not player_row.empty:
@@ -20,7 +20,7 @@ def get_player_id(year, player_name):
         return "Player not found"
 
 def scrape_html(player_id):
-
+    """Scrape HTML using given player ID in URL."""
     url = f"https://www.basketball-reference.com/players/{player_id[0]}/{player_id}.html"
     
     response = requests.get(url)
@@ -35,6 +35,7 @@ def scrape_html(player_id):
     return soup
 
 def scrape_html_table(soup, table_id):
+    """Scrape beautifulsoup HTML response data for a table with a given ID."""
     if not soup:
         return None
 
@@ -56,6 +57,7 @@ def scrape_html_table(soup, table_id):
     return None
 
 def scrape_html_current_salary_table(soup):
+    """Scrape beautifulsoup HTML response data for a table where the ID begins with 'contracts_'."""
 
     comments = soup.find_all(string=lambda text: isinstance(text, Comment))
 
@@ -70,6 +72,7 @@ def scrape_html_current_salary_table(soup):
     return contract_table
 
 def html_table_to_df_adv(table):
+    """Return a DataFrame from a given HTML table element."""
 
     if table is None:
         logger.warning("Table not found.")
@@ -95,6 +98,7 @@ def html_table_to_df_adv(table):
     return df
 
 def html_table_to_df_past_salary(table):
+    """Return a DataFrame from a given HTML table element."""
     if table is None:
         logger.warning("Salary table not found in HTML.")
         return None
@@ -112,6 +116,7 @@ def html_table_to_df_past_salary(table):
     return df
 
 def html_table_to_df_current_salary(contract_table):
+    """Return a DataFrame from a given HTML table element."""
     if contract_table:
         table = contract_table.find("table")
         
@@ -129,6 +134,7 @@ def html_table_to_df_current_salary(contract_table):
             return df
         
 def convert_nba_season_to_year(season):
+    """Convert NBA season format '2014-15' to simple 4-digit year '2015'."""
     try:
         start_year, end_year_suffix = season.split("-")
         end_year = int(start_year[:2] + end_year_suffix)
@@ -138,6 +144,7 @@ def convert_nba_season_to_year(season):
         return None
     
 def money_to_float(s):
+    """Convert string with $ and commas to a float variable."""
     try:
         return float(s.replace("$", "").replace(",", ""))
     except Exception as e:

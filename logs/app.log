@@ -80,3 +80,29 @@
 2025-02-10 11:47:17.050 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
 2025-02-10 11:47:17.053 | INFO     | __main__:search_player:81 - Salary Per WS: $0.00, Salary: $10,500,000.00
 2025-02-10 11:47:17.054 | INFO     | __main__:search_player:82 - CVR: 0.0, Salary: $10,500,000.00
+2025-02-16 05:28:56.499 | INFO     | __main__:<module>:110 - Starting Flask app...
+2025-02-16 05:29:19.549 | INFO     | __main__:search_player:33 - Searching for player: Kevin Durant, Season: 2024-25
+2025-02-16 05:29:21.172 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2016-17: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:21.173 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2016-17 Salary Cap: $94,143,000
+2025-02-16 05:29:21.545 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2017-18: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:21.546 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2017-18 Salary Cap: $99,093,000
+2025-02-16 05:29:21.916 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2018-19: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:21.917 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2018-19 Salary Cap: $101,869,000
+2025-02-16 05:29:22.293 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-16 05:29:22.294 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2019-20 Salary Cap: $109,140,000
+2025-02-16 05:29:22.703 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-16 05:29:22.704 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2020-21 Salary Cap: $109,140,000
+2025-02-16 05:29:23.081 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:23.082 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2021-22 Salary Cap: $112,414,000
+2025-02-16 05:29:23.450 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:23.451 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2022-23 Salary Cap: $123,655,000
+2025-02-16 05:29:23.816 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:23.817 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2022-23 Salary Cap: $123,655,000
+2025-02-16 05:29:24.172 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:24.173 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2022-23 Salary Cap: $123,655,000
+2025-02-16 05:29:24.545 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:24.546 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2023-24 Salary Cap: $136,021,000
+2025-02-16 05:29:25.255 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:56 - Scraped Data - 2024-25: Total Wins: 814, Total Teams: 30
+2025-02-16 05:29:25.256 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2024-25 Salary Cap: $140,588,000
+2025-02-16 05:29:25.257 | INFO     | __main__:search_player:81 - Salary Per WS: $13,468,163.42, Salary: $51,179,021.00
+2025-02-16 05:29:25.257 | INFO     | __main__:search_player:82 - CVR: 4.11, Salary: $51,179,021.00

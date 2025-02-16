@@ -1,0 +1,175 @@
+2025-02-10 03:02:36.387 | INFO     | __main__:<module>:107 - Starting Flask app...
+2025-02-10 03:02:48.087 | INFO     | __main__:search_player:33 - Searching for player: Scotty Pippen Jr., Season: 2023-24
+2025-02-10 03:05:56.555 | INFO     | __main__:search_player:33 - Searching for player: Scotty Pippen Jr., Season: 2023-24
+2025-02-10 03:06:08.685 | INFO     | __main__:<module>:107 - Starting Flask app...
+2025-02-10 03:06:19.969 | INFO     | __main__:search_player:33 - Searching for player: Scotty Pippen Jr., Season: 2023-24
+2025-02-10 03:06:20.546 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '(TW)'
+2025-02-10 03:06:20.571 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 03:06:20.572 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 03:09:35.601 | INFO     | __main__:search_player:33 - Searching for player: Scotty Pippen Jr., Season: 2023-24
+2025-02-10 03:09:36.165 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '(TW)'
+2025-02-10 03:09:36.166 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 03:09:36.167 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 03:09:44.939 | INFO     | __main__:<module>:107 - Starting Flask app...
+2025-02-10 03:09:52.072 | INFO     | __main__:search_player:33 - Searching for player: Scotty Pippen Jr., Season: 2023-24
+2025-02-10 03:09:52.610 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '(TW)'
+2025-02-10 03:09:52.611 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 03:09:52.613 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 03:09:52.688 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '(TW)'
+2025-02-10 03:09:52.690 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-10 03:09:52.691 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-10 03:09:53.277 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 777, Total Teams: 30
+2025-02-10 03:09:53.279 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-10 03:09:53.281 | INFO     | __main__:search_player:79 - CVR: 0.0, Salary: $0.00
+2025-02-10 03:11:50.965 | INFO     | __main__:search_player:33 - Searching for player: Jordan Walsh, Season: 2023-24
+2025-02-10 03:11:51.520 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-10 03:11:51.522 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-10 03:11:51.987 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 777, Total Teams: 30
+2025-02-10 03:11:51.989 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-10 03:11:51.990 | INFO     | __main__:search_player:79 - CVR: 4.62, Salary: $1,119,563.00
+2025-02-10 11:39:45.317 | INFO     | __main__:<module>:107 - Starting Flask app...
+2025-02-10 11:40:04.964 | INFO     | __main__:search_player:33 - Searching for player: Gabe Vincent, Season: 2023-24
+2025-02-10 11:40:06.632 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:40:06.635 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-10 11:40:06.636 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2019-20 Salary Cap: $109,140,000 
+2025-02-10 11:40:06.969 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:40:06.971 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-10 11:40:06.974 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2020-21 Salary Cap: $109,140,000 
+2025-02-10 11:40:07.270 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:40:07.272 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2021-22 Salary Cap: $112,414,000 
+2025-02-10 11:40:07.553 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:40:07.555 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 11:40:07.871 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:40:07.872 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-10 11:40:08.864 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 780, Total Teams: 30
+2025-02-10 11:40:08.867 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-10 11:40:08.871 | INFO     | __main__:search_player:79 - CVR: 5.0, Salary: $10,500,000.00
+2025-02-10 11:44:49.917 | INFO     | __main__:<module>:110 - Starting Flask app...
+2025-02-10 11:45:12.115 | INFO     | __main__:search_player:33 - Searching for player: Gabe Vincent, Season: 2023-24
+2025-02-10 11:45:13.148 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:45:13.149 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-10 11:45:13.150 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2019-20 Salary Cap: $109,140,000 
+2025-02-10 11:45:13.335 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:45:13.337 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-10 11:45:13.338 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2020-21 Salary Cap: $109,140,000 
+2025-02-10 11:45:13.492 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:45:13.493 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2021-22 Salary Cap: $112,414,000 
+2025-02-10 11:45:13.651 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:45:13.651 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 11:45:13.845 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:45:13.845 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-10 11:45:14.487 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 780, Total Teams: 30
+2025-02-10 11:45:14.489 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-10 11:45:14.491 | INFO     | __main__:search_player:81 - Salary Per WS: $-105,000,000.00, Salary: $10,500,000.00
+2025-02-10 11:45:14.492 | INFO     | __main__:search_player:82 - CVR: 5.0, Salary: $10,500,000.00
+2025-02-10 11:46:56.440 | INFO     | __main__:<module>:110 - Starting Flask app...
+2025-02-10 11:47:13.173 | INFO     | __main__:search_player:33 - Searching for player: Gabe Vincent, Season: 2023-24
+2025-02-10 11:47:14.782 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:47:14.784 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-10 11:47:14.786 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2019-20 Salary Cap: $109,140,000 
+2025-02-10 11:47:15.108 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: '< Minimum'
+2025-02-10 11:47:15.110 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-10 11:47:15.111 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2020-21 Salary Cap: $109,140,000 
+2025-02-10 11:47:15.410 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:47:15.411 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2021-22 Salary Cap: $112,414,000 
+2025-02-10 11:47:15.708 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:47:15.710 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-10 11:47:16.046 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-10 11:47:16.048 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-10 11:47:17.046 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 780, Total Teams: 30
+2025-02-10 11:47:17.050 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-10 11:47:17.053 | INFO     | __main__:search_player:81 - Salary Per WS: $0.00, Salary: $10,500,000.00
+2025-02-10 11:47:17.054 | INFO     | __main__:search_player:82 - CVR: 0.0, Salary: $10,500,000.00
+2025-02-16 03:12:06.131 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2016-17: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:12:06.133 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2016-17 Salary Cap: $94,143,000 
+2025-02-16 03:12:06.382 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2017-18: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:12:06.383 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2017-18 Salary Cap: $99,093,000 
+2025-02-16 03:12:06.602 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2018-19: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:12:06.603 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2018-19 Salary Cap: $101,869,000 
+2025-02-16 03:12:06.854 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-16 03:12:06.854 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2019-20 Salary Cap: $109,140,000 
+2025-02-16 03:12:07.103 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-16 03:12:07.104 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2020-21 Salary Cap: $109,140,000 
+2025-02-16 03:12:07.316 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:12:07.317 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2021-22 Salary Cap: $112,414,000 
+2025-02-16 03:12:07.560 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:12:07.561 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-16 03:12:07.773 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:12:07.773 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-16 03:12:08.536 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 814, Total Teams: 30
+2025-02-16 03:12:08.538 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-16 03:30:10.008 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2016-17: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:30:10.009 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2016-17 Salary Cap: $94,143,000 
+2025-02-16 03:30:10.234 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2017-18: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:30:10.236 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2017-18 Salary Cap: $99,093,000 
+2025-02-16 03:30:10.441 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2018-19: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:30:10.442 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2018-19 Salary Cap: $101,869,000 
+2025-02-16 03:30:10.680 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-16 03:30:10.681 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2019-20 Salary Cap: $109,140,000 
+2025-02-16 03:30:10.906 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-16 03:30:10.907 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2020-21 Salary Cap: $109,140,000 
+2025-02-16 03:30:11.113 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:30:11.113 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2021-22 Salary Cap: $112,414,000 
+2025-02-16 03:30:11.338 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:30:11.339 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-16 03:30:11.532 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:30:11.533 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-16 03:30:12.142 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 814, Total Teams: 30
+2025-02-16 03:30:12.144 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-16 03:57:09.430 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2016-17: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:57:09.430 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2016-17 Salary Cap: $94,143,000 
+2025-02-16 03:57:09.670 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2017-18: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:57:09.671 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2017-18 Salary Cap: $99,093,000 
+2025-02-16 03:57:09.888 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2018-19: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:57:09.889 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2018-19 Salary Cap: $101,869,000 
+2025-02-16 03:57:10.140 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-16 03:57:10.141 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2019-20 Salary Cap: $109,140,000 
+2025-02-16 03:57:10.394 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-16 03:57:10.395 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2020-21 Salary Cap: $109,140,000 
+2025-02-16 03:57:10.614 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:57:10.615 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2021-22 Salary Cap: $112,414,000 
+2025-02-16 03:57:10.870 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:57:10.872 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2022-23 Salary Cap: $123,655,000 
+2025-02-16 03:57:11.086 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:29 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-16 03:57:11.087 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2023-24 Salary Cap: $136,021,000 
+2025-02-16 03:57:11.706 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:55 - Scraped Data - 2024-25: Total Wins: 814, Total Teams: 30
+2025-02-16 03:57:11.707 | INFO     | scrapeTotalSeasonGames:get_salary_cap:70 - 2024-25 Salary Cap: $140,588,000 
+2025-02-16 05:00:33.636 | ERROR    | scrapeSalaryData:scrape_html:28 - Failed to retrieve page.
+2025-02-16 05:00:33.639 | WARNING  | scrapeSalaryData:scrape_html_table:55 - Table with id starting with 'unknown' not found.
+2025-02-16 05:00:33.651 | ERROR    | scrapeSalaryData:convert_nba_season_to_year:137 - Invalid season format: invalid
+2025-02-16 05:00:33.654 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: 'invalid'
+2025-02-16 05:04:45.534 | ERROR    | scrapeSalaryData:scrape_html:28 - Failed to retrieve page.
+2025-02-16 05:04:45.536 | WARNING  | scrapeSalaryData:scrape_html_table:55 - Table with id starting with 'unknown' not found.
+2025-02-16 05:04:45.549 | ERROR    | scrapeSalaryData:convert_nba_season_to_year:137 - Invalid season format: invalid
+2025-02-16 05:04:45.550 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: 'invalid'
+2025-02-16 05:28:36.617 | ERROR    | scrapeSalaryData:scrape_html:28 - Failed to retrieve page.
+2025-02-16 05:28:36.620 | WARNING  | scrapeSalaryData:scrape_html_table:55 - Table with id starting with 'unknown' not found.
+2025-02-16 05:28:36.637 | ERROR    | scrapeSalaryData:convert_nba_season_to_year:137 - Invalid season format: invalid
+2025-02-16 05:28:36.640 | ERROR    | scrapeSalaryData:money_to_float:144 - Error converting money string to float: could not convert string to float: 'invalid'
+2025-02-16 05:28:56.499 | INFO     | __main__:<module>:110 - Starting Flask app...
+2025-02-16 05:29:19.549 | INFO     | __main__:search_player:33 - Searching for player: Kevin Durant, Season: 2024-25
+2025-02-16 05:29:21.172 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2016-17: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:21.173 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2016-17 Salary Cap: $94,143,000
+2025-02-16 05:29:21.545 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2017-18: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:21.546 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2017-18 Salary Cap: $99,093,000
+2025-02-16 05:29:21.916 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2018-19: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:21.917 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2018-19 Salary Cap: $101,869,000
+2025-02-16 05:29:22.293 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2019-20: Total Wins: 1059, Total Teams: 30
+2025-02-16 05:29:22.294 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2019-20 Salary Cap: $109,140,000
+2025-02-16 05:29:22.703 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2020-21: Total Wins: 1080, Total Teams: 30
+2025-02-16 05:29:22.704 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2020-21 Salary Cap: $109,140,000
+2025-02-16 05:29:23.081 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2021-22: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:23.082 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2021-22 Salary Cap: $112,414,000
+2025-02-16 05:29:23.450 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:23.451 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2022-23 Salary Cap: $123,655,000
+2025-02-16 05:29:23.816 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:23.817 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2022-23 Salary Cap: $123,655,000
+2025-02-16 05:29:24.172 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2022-23: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:24.173 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2022-23 Salary Cap: $123,655,000
+2025-02-16 05:29:24.545 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:30 - Loaded from CSV - 2023-24: Total Wins: 1230, Total Teams: 30
+2025-02-16 05:29:24.546 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2023-24 Salary Cap: $136,021,000
+2025-02-16 05:29:25.255 | INFO     | scrapeTotalSeasonGames:scrape_total_league_wins_and_teams:56 - Scraped Data - 2024-25: Total Wins: 814, Total Teams: 30
+2025-02-16 05:29:25.256 | INFO     | scrapeTotalSeasonGames:get_salary_cap:71 - 2024-25 Salary Cap: $140,588,000
+2025-02-16 05:29:25.257 | INFO     | __main__:search_player:81 - Salary Per WS: $13,468,163.42, Salary: $51,179,021.00
+2025-02-16 05:29:25.257 | INFO     | __main__:search_player:82 - CVR: 4.11, Salary: $51,179,021.00
+2025-02-16 05:29:59.648 | INFO     | __main__:<module>:110 - Starting Flask app...
