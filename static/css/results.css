@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 40px;
+}
+
+/* LOGO STYLING */
+.logo-wrapper {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 280px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Main container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 1200px;
+    width: 90%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure player-container properly aligns all elements */
+.player-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+/* Player Image Styling */
+.player-image-container {
+    width: 120px;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid white;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.player-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.player-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Player Info */
+.player-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.season-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffdd57;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.player-name {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.player-details {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Salary & Contract Value Rating Parent Container */
+.salary-contract-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    margin-left: auto;
+    max-width: 750px; /* Ensures consistent width with tabs */
+}
+
+
+/* Salary & Contract Value Containers */
+.salary-container, .contract-value-container {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px; /* Adjust width for consistency */
+}
+
+/* Align Contract Value and Star Horizontally */
+.contract-rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%; /* Ensures full width */
+    padding: 5px 10px; /* Adds spacing */
+    gap: 5px;
+}
+
+/* Star Image Styling */
+.star-image {
+    width: 28px; /* Adjust size */
+    height: 28px;
+}
+
+/* Labels */
+.salary-label, .contract-label {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Values */
+.salary-value, .contract-value {
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffdd57; /* Golden yellow for emphasis */
+}
+
+/* TAB NAVIGATION */
+.tab-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns tabs to the left */
+    gap: 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0;
+    border-radius: 10px 10px 0 0; /* Matches table's top corners */
+    width: 50%;
+    max-width: 1000px; /* Ensures it matches table width */
+    margin-bottom: -20px; /* Remove space between tabs and table */
+    overflow: hidden; /* Prevents unwanted spacing */
+}
+
+/* Tab Buttons - Connected to Table */
+.tab-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 1;
+    max-width: 200px;
+    border-radius: 0; /* Remove round edges */
+}
+
+/* Active Tab Looks Connected to Table */
+.tab-btn.active {
+    background: #ef3241; /* Matches table header color */
+    color: white;
+    font-weight: bold;
+}
+
+.tab-btn:hover {
+    background: #ff6b6b; /* Lighter red for hover effect */
+    color: white;
+}
+
+/* Tab Content - Directly Under Tabs */
+.tab-content {
+    display: none;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 10px 10px;
+    width: 95%; /* Matches table width */
+    max-width: 1150px; /* Keeps it aligned with the main container */
+    margin-top: 0;
+}
+
+/* Ensure Active Tab Content is Visible */
+.tab-content.active {
+    display: block;
+}
+
+/* Table Styling - Blended with Tabs */
+table {
+    width: 100%; /* Adjusts width to be nearly as wide as the container */
+    max-width: 1200px; /* Ensures it doesn’t exceed the main container width */
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    font-size: 17px;
+    margin: 0 auto; /* Centers the table */
+}
+
+/* Table Header Connected to Active Tab */
+th {
+    background: #ef3241; /* Same color as active tab */
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid rgba(31, 31, 31, 0.4);
+}
+
+
+td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid rgba(31, 31, 31, 0.4);
+}
+
+td:first-child, th:first-child {
+    width: 105px; /* Adjust this value as needed */
+    font-weight: bold;
+}
+
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+th, td {
+    text-align: center; /* Centers text horizontally */
+    vertical-align: middle; /* Centers text vertically */
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* ================================= */
+/* 📱 Mobile Styles (Screen ≤ 768px) */
+/* ================================= */
+@media screen and (max-width: 768px) {
+    /* Reduce body padding for smaller screens */
+    body {
+        padding: 20px;
+    }
+
+    /* Main container adapts for smaller screens */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    /* Stack player-container elements vertically */
+    .player-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Adjust Player Image */
+    .player-image-container {
+        width: 120px;
+        height: 180px;
+    }
+
+    /* Center-align player details */
+    .player-info {
+        text-align: center;
+    }
+
+    .player-name {
+        font-size: 30px;
+    }
+
+    .player-details {
+        font-size: 18px;
+    }
+
+    /* Make salary and contract sections center */
+    .salary-contract-container {
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0; /* Prevents forced right alignment */
+    }
+
+    /* Ensure CVR content is centered */
+    .contract-value-container {
+        align-items: center; /* Centers the content */
+        text-align: center;  /* Ensures text is centered */
+        justify-content: center; /* Keeps items evenly spaced */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Align Contract Value and Star in the center */
+    .contract-rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px; /* Space between CVR value and star */
+    }
+
+    /* Adjust salary and contract value containers */
+    .salary-container, .contract-value-container {
+        width: 90%;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Keep tabs side by side (Responsive) */
+    .tab-container {
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        justify-content: center; /* Centers the tabs */
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Make tab buttons smaller but keep them side by side */
+    .tab-btn {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+        min-width: 33%; /* Each tab takes up equal space */
+        max-width: 33%;
+        text-align: center;
+    }
+
+    .tab-btn.active {
+        background: #ef3241; /* Matches table header color */
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Ensure tables are responsive */
+    .tab-content {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        width: auto;
+        min-width: 100%;
+        table-layout: auto;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 15px;
+    }
+
+    td:first-child, th:first-child {
+        min-width: 120px; /* Adjust this value as needed */
+        width: 120px; /* Ensures a consistent width */
+        white-space: nowrap; /* Prevents text from wrapping */
+    }
+    
+
+    /* Ensure buttons are full-width */
+    .button {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+}

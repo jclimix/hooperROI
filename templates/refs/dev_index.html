@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Durant (2023-24) | HooperROI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0F3460;
+            --secondary: #FF5722;
+            --accent: #E94560;
+            --light: #F5F5F5;
+            --dark: #333333;
+            --gray: #888888;
+            --success: #4CAF50;
+            --warning: #FFC107;
+            --danger: #F44336;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: var(--primary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 40px;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .player-hero {
+            background: linear-gradient(135deg, var(--primary), #1a4b8c);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .player-image-container {
+            position: relative;
+        }
+
+        .player-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .player-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .player-details {
+            flex: 1;
+        }
+
+        .season-label {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .player-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .player-info {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-item i {
+            color: var(--secondary);
+        }
+
+        .stats-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stat-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .stat-icon {
+            font-size: 1.25rem;
+            color: var(--secondary);
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-secondary {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .salary-value {
+            color: var(--accent);
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .rating-stars {
+            display: flex;
+            align-items: center;
+        }
+
+        .star {
+            color: #FFC107;
+            font-size: 1.5rem;
+        }
+
+        .half-star {
+            position: relative;
+            font-size: 1.5rem;
+        }
+
+        .half-star:before {
+            content: "\f089"; /* FA half star */
+            position: absolute;
+            color: #FFC107;
+        }
+
+        .contract-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(90deg, #f7f7f7, #fff);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            border: 1px solid #eee;
+        }
+
+        .contract-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .tabs-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2.5rem;
+        }
+
+        .tab-nav {
+            display: flex;
+            background-color: var(--primary);
+            padding: 0.5rem;
+            border-radius: 12px 12px 0 0;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            border: none;
+            background: none;
+            color: rgba(255,255,255,0.7);
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .tab-btn.active {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 1.5rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: #f5f7fa;
+            color: var(--primary);
+            text-align: left;
+            padding: 1rem;
+            font-weight: 600;
+            border-bottom: 2px solid #eee;
+        }
+
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fafc;
+        }
+
+        tr:hover {
+            background-color: #f5f7fa;
+        }
+
+        .highlight-row {
+            background-color: rgba(255, 87, 34, 0.05) !important;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .action-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), #1a4b8c);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(15, 52, 96, 0.2);
+            margin-top: 2rem;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(15, 52, 96, 0.25);
+        }
+
+        .action-btn i {
+            margin-right: 0.5rem;
+        }
+
+        .external-link {
+            color: var(--primary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .external-link:hover {
+            color: var(--secondary);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            height: 30px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .player-info {
+                justify-content: center;
+            }
+
+            .player-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .player-name {
+                font-size: 2rem;
+            }
+
+            .tab-nav {
+                justify-content: flex-start;
+            }
+
+            .table-responsive {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/">
+                    <img src="/static/images/logo.png" alt="HooperROI" class="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Player Hero Section -->
+    <section class="player-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="player-image-container">
+                    <a href="https://www.basketball-reference.com/players/d/duranke01.html" target="_blank">
+                        <img src="https://www.basketball-reference.com/req/202106291/images/headshots/duranke01.jpg" alt="Kevin Durant" class="player-image">
+                    </a>
+                </div>
+                <div class="player-details">
+                    <span class="season-label">2023-24 Season</span>
+                    <h1 class="player-name">Kevin Durant</h1>
+                    <div class="player-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span>35 years</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-basketball"></i>
+                            <span>PF</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-jersey"></i>
+                            <span>Phoenix Suns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Stats Overview Cards -->
+        <div class="stats-overview">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <h3 class="stat-title">Season Salary</h3>
+                    <i class="fas fa-money-bill-wave stat-icon"></i>
+                </div>
+                <p class="stat-value salary-value">$47.65M</p>
+                <p class="stat-secondary">2023-24 Season</p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-header">
+                    <h3 class="stat-title">Contract Value Rating</h3>
+                    <i class="fas fa-star stat-icon"></i>
+                </div>
+                <div class="rating-container">
+                    <p class="contract-value">4.59</p>
+                    <div class="rating-stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star-half-alt star"></i>
+                    </div>
+                </div>
+                <p class="stat-secondary">Based on performance analytics</p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-header">
+                    <h3 class="stat-title">Key Performance</h3>
+                    <i class="fas fa-chart-line stat-icon"></i>
+                </div>
+                <p class="stat-value">27.1 PPG</p>
+                <p class="stat-secondary">75 Games Played | 8.3 Win Shares</p>
+            </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="tabs-container">
+            <div class="tab-nav">
+                <button class="tab-btn active" onclick="showTab('contract_roi')">
+                    <i class="fas fa-dollar-sign"></i> Contract ROI
+                </button>
+                <button class="tab-btn" onclick="showTab('pergame')">
+                    <i class="fas fa-chart-bar"></i> Per-Game Stats
+                </button>
+                <button class="tab-btn" onclick="showTab('advanced')">
+                    <i class="fas fa-chart-pie"></i> Advanced Metrics
+                </button>
+            </div>
+
+            <!-- Contract ROI Tab -->
+            <div id="contract_roi" class="tab-content active">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Season</th>
+                                <th>Salary</th>
+                                <th>Win Shares</th>
+                                <th>Salary Per WS</th>
+                                <th>Overpay Index</th>
+                                <th>Value Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2016-17</td>
+                                <td>$26.54M</td>
+                                <td>12.0</td>
+                                <td>$2.21M</td>
+                                <td>0.96</td>
+                                <td>5.00</td>
+                            </tr>
+                            <tr>
+                                <td>2017-18</td>
+                                <td>$25.00M</td>
+                                <td>10.4</td>
+                                <td>$2.40M</td>
+                                <td>0.99</td>
+                                <td>5.00</td>
+                            </tr>
+                            <tr>
+                                <td>2018-19</td>
+                                <td>$30.00M</td>
+                                <td>11.5</td>
+                                <td>$2.61M</td>
+                                <td>1.05</td>
+                                <td>4.97</td>
+                            </tr>
+                            <tr>
+                                <td>2019-20</td>
+                                <td>$37.20M</td>
+                                <td>0.0</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td>2020-21</td>
+                                <td>$39.06M</td>
+                                <td>5.0</td>
+                                <td>$7.81M</td>
+                                <td>2.58</td>
+                                <td>4.12</td>
+                            </tr>
+                            <tr>
+                                <td>2021-22</td>
+                                <td>$40.92M</td>
+                                <td>8.4</td>
+                                <td>$4.87M</td>
+                                <td>1.78</td>
+                                <td>4.57</td>
+                            </tr>
+                            <tr>
+                                <td>2022-23</td>
+                                <td>$44.12M</td>
+                                <td>6.8</td>
+                                <td>$6.49M</td>
+                                <td>2.15</td>
+                                <td>4.36</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td>2023-24</td>
+                                <td>$47.65M</td>
+                                <td>8.3</td>
+                                <td>$5.74M</td>
+                                <td>1.73</td>
+                                <td>4.59</td>
+                            </tr>
+                            <tr>
+                                <td>2024-25</td>
+                                <td>$51.18M</td>
+                                <td>4.1</td>
+                                <td>$12.48M</td>
+                                <td>2.60</td>
+                                <td>4.11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Per-Game Stats Tab -->
+            <div id="pergame" class="tab-content">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Season</th>
+                                <th>Age</th>
+                                <th>Team</th>
+                                <th>G</th>
+                                <th>MP</th>
+                                <th>PTS</th>
+                                <th>AST</th>
+                                <th>TRB</th>
+                                <th>BLK</th>
+                                <th>STL</th>
+                                <th>FG%</th>
+                                <th>3P%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Simplified for demo - showing just a few rows -->
+                            <tr>
+                                <td>2016-17</td>
+                                <td>28</td>
+                                <td>GSW</td>
+                                <td>62</td>
+                                <td>33.4</td>
+                                <td>25.1</td>
+                                <td>4.8</td>
+                                <td>8.3</td>
+                                <td>1.6</td>
+                                <td>1.1</td>
+                                <td>.537</td>
+                                <td>.375</td>
+                            </tr>
+                            <tr>
+                                <td>2017-18</td>
+                                <td>29</td>
+                                <td>GSW</td>
+                                <td>68</td>
+                                <td>34.2</td>
+                                <td>26.4</td>
+                                <td>5.4</td>
+                                <td>6.8</td>
+                                <td>1.8</td>
+                                <td>0.7</td>
+                                <td>.516</td>
+                                <td>.419</td>
+                            </tr>
+                            <tr>
+                                <td>2022-23</td>
+                                <td>34</td>
+                                <td>BRK</td>
+                                <td>39</td>
+                                <td>36.0</td>
+                                <td>29.7</td>
+                                <td>5.3</td>
+                                <td>6.7</td>
+                                <td>1.5</td>
+                                <td>0.8</td>
+                                <td>.559</td>
+                                <td>.376</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td>2023-24</td>
+                                <td>35</td>
+                                <td>PHO</td>
+                                <td>75</td>
+                                <td>37.2</td>
+                                <td>27.1</td>
+                                <td>5.0</td>
+                                <td>6.6</td>
+                                <td>1.2</td>
+                                <td>0.9</td>
+                                <td>.523</td>
+                                <td>.413</td>
+                            </tr>
+                            <tr>
+                                <td>2024-25</td>
+                                <td>36</td>
+                                <td>PHO</td>
+                                <td>46</td>
+                                <td>36.8</td>
+                                <td>26.9</td>
+                                <td>4.2</td>
+                                <td>6.0</td>
+                                <td>1.3</td>
+                                <td>0.9</td>
+                                <td>.529</td>
+                                <td>.397</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Advanced Stats Tab -->
+            <div id="advanced" class="tab-content">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Season</th>
+                                <th>Age</th>
+                                <th>Team</th>
+                                <th>PER</th>
+                                <th>WS</th>
+                                <th>TS%</th>
+                                <th>BPM</th>
+                                <th>VORP</th>
+                                <th>TRB%</th>
+                                <th>AST%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Simplified for demo - showing just a few rows -->
+                            <tr>
+                                <td>2016-17</td>
+                                <td>28</td>
+                                <td>GSW</td>
+                                <td>27.6</td>
+                                <td>12.0</td>
+                                <td>.651</td>
+                                <td>8.9</td>
+                                <td>5.7</td>
+                                <td>13.6</td>
+                                <td>23.1</td>
+                            </tr>
+                            <tr>
+                                <td>2022-23</td>
+                                <td>34</td>
+                                <td>BRK</td>
+                                <td>26.2</td>
+                                <td>5.7</td>
+                                <td>.673</td>
+                                <td>7.0</td>
+                                <td>3.2</td>
+                                <td>10.5</td>
+                                <td>25.9</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td>2023-24</td>
+                                <td>35</td>
+                                <td>PHO</td>
+                                <td>21.2</td>
+                                <td>8.3</td>
+                                <td>.626</td>
+                                <td>4.0</td>
+                                <td>4.3</td>
+                                <td>10.0</td>
+                                <td>22.2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- External Links & Actions -->
+        <div style="text-align: center;">
+            <a href="https://www.basketball-reference.com/players/d/duranke01.html" class="external-link" target="_blank">
+                <i class="fas fa-external-link-alt"></i> View Full Stats on Basketball Reference
+            </a>
+            
+            <div>
+                <a href="/" class="action-btn">
+                    <i class="fas fa-search"></i> Search Another Player
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <img src="/static/images/logo.png" alt="HooperROI" class="footer-logo">
+                <div class="footer-nav">
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Players</a>
+                    <a href="#" class="footer-link">Teams</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <p class="copyright">© 2025 HooperROI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+
+            // Update active tab button
+            document.querySelectorAll('.tab-btn').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Find the button that was clicked and make it active
+            document.querySelectorAll('.tab-btn').forEach(button => {
+                if (button.onclick.toString().includes(tabName)) {
+                    button.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

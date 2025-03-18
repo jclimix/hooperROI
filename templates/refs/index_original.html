@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HooperROI | Universe-J</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        </div>
+
+        <!-- Buttons -->
+<div class="button-group">
+    <a href="https://docs.google.com/presentation/d/1CoinwC_2KkLWofD7yJzZsNiVRmRZFePtL1SzWv96W7k/edit?usp=sharing" class="button">Slides</a>
+    <a href="https://docs.google.com/document/d/1A5KDBYP4vT1oRa8S5biN41iuPoIvevrZXPiELGtX368/edit?usp=sharing" class="button">G-Doc</a>
+</div>
+
+
+        <!-- Input Section -->
+        <form action="{{ url_for('search_player') }}" method="post">
+            <div class="input-group">
+                <label for="seasonDropdown">Select Season:</label>
+                <select id="seasonDropdown" name="season">
+                    <option value="">Select Season</option>
+                </select>
+            </div>
+        
+            <div class="input-group">
+                <label for="playerDropdownInput">Search Player:</label>
+                <input list="playerDropdown" id="playerDropdownInput" name="player" placeholder="Type to search...">
+                <datalist id="playerDropdown"></datalist>
+            </div>
+        
+            <button type="submit" class="button submit-btn">Submit</button>
+        </form>
+        
+    </div>
+
+    <script>
+        let players = [];
+
+        async function loadCSV(season) {
+            const seasonMapping = {
+                "2016-17": "2017_player_data.csv",
+                "2017-18": "2018_player_data.csv",
+                "2018-19": "2019_player_data.csv",
+                "2019-20": "2020_player_data.csv",
+                "2020-21": "2021_player_data.csv",
+                "2021-22": "2022_player_data.csv",
+                "2022-23": "2023_player_data.csv",
+                "2023-24": "2024_player_data.csv",
+                "2024-25": "2025_player_data.csv"
+            };
+
+            const csvFile = seasonMapping[season];
+            if (!csvFile) return;
+
+            try {
+                const response = await fetch(`/data/${csvFile}`);
+                if (!response.ok) {
+                    throw new Error("CSV file not found.");
+                }
+                const text = await response.text();
+                const rows = text.split("\n").slice(1);
+                players = rows.map(row => row.split(",")[0].trim()).filter(name => name);
+                filterPlayers();
+            } catch (error) {
+                console.error("Error loading CSV:", error);
+            }
+        }
+
+        function filterPlayers() {
+            const input = document.getElementById("playerDropdownInput").value.toLowerCase();
+            const datalist = document.getElementById("playerDropdown");
+            datalist.innerHTML = '';
+
+            const filteredPlayers = players.filter(name => name.toLowerCase().includes(input)).slice(0, 10);
+            filteredPlayers.forEach(name => {
+                let option = document.createElement("option");
+                option.value = name;
+                datalist.appendChild(option);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const seasonDropdown = document.getElementById("seasonDropdown");
+
+            for (let year = 2016; year <= 2024; year++) {
+                let season = `${year}-${(year + 1) % 100}`;
+                let option = document.createElement("option");
+                option.value = season;
+                option.textContent = season;
+                seasonDropdown.appendChild(option);
+            }
+
+            seasonDropdown.addEventListener("change", (event) => {
+                loadCSV(event.target.value);
+            });
+
+            document.getElementById("playerDropdownInput").addEventListener("input", filterPlayers);
+        });
+    </script>
+</body>
+</html>

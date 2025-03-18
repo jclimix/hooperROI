@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+            
+            document.querySelectorAll('.nav-link').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+    <style>
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="container mt-5">
+    <h1 class="text-center">{{ title }}</h1>
+    <p class="text-center">{{ description }}</p>
+    
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#" onclick="showTab('playerStats')">Player Statistics</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showTab('championshipWinners')">Championship Winners</a>
+        </li>
+    </ul>
+    
+    <div id="playerStats" class="tab-content active">
+        <h2>Player Statistics</h2>
+        {{ table1 | safe }}
+    </div>
+    
+    <div id="championshipWinners" class="tab-content">
+        <h2>Championship Winners</h2>
+        {{ table2 | safe }}
+    </div>
+</body>
+</html>
