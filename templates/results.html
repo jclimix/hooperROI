@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,18 +22,18 @@
             --border-color: rgba(255, 255, 255, 0.1);
             --shadow-color: rgba(0, 0, 0, 0.5);
         }
-        
+
         body {
             background-color: var(--dark-bg);
             font-family: 'Lexend', sans-serif;
             color: var(--text-primary);
         }
-        
+
         .container {
             max-width: 900px;
             margin-top: 0px;
         }
-        
+
         .card {
             border-radius: 16px;
             box-shadow: 0 8px 20px var(--shadow-color);
@@ -40,7 +41,7 @@
             border: none;
             background-color: var(--card-bg);
         }
-        
+
         .card-header {
             background-color: var(--card-header);
             color: white;
@@ -48,12 +49,12 @@
             padding: 18px 24px;
             font-weight: 500;
         }
-        
+
         .card-body {
             padding: 24px;
             color: var(--text-primary);
         }
-        
+
         .btn-primary {
             background-color: var(--nba-red);
             border-color: var(--nba-red);
@@ -61,24 +62,24 @@
             font-weight: 500;
             padding: 10px 20px;
         }
-        
+
         .btn-primary:hover {
             background-color: #b0362d;
             border-color: #b0362d;
         }
-        
+
         .btn-outline-secondary {
             border-radius: 8px;
             font-weight: 500;
             color: var(--text-primary);
             border-color: var(--text-secondary);
         }
-        
+
         .btn-outline-secondary:hover {
             background-color: var(--card-bg);
             color: white;
         }
-        
+
         .stat-card {
             background-color: var(--darker-bg);
             border-radius: 12px;
@@ -88,18 +89,18 @@
             transition: transform 0.2s;
             border: 1px solid var(--border-color);
         }
-        
+
         .stat-card:hover {
             transform: translateY(-3px);
         }
-        
+
         .stat-value {
             font-size: 28px;
             font-weight: 700;
             color: var(--nba-blue);
             margin-top: 8px;
         }
-        
+
         .stat-label {
             font-size: 14px;
             color: var(--text-secondary);
@@ -108,25 +109,25 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         .rating-stars {
             font-size: 28px;
             color: gold;
             margin-top: 8px;
         }
-        
+
         .rating-number {
             font-size: 36px;
             font-weight: 700;
             color: var(--nba-blue);
         }
-        
+
         .player-header {
             display: flex;
             align-items: center;
             gap: 20px;
         }
-        
+
         .team-badge {
             width: 50px;
             height: 50px;
@@ -140,32 +141,34 @@
             font-size: 18px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        
-        .stats-table td, .stats-table th {
+
+        .stats-table td,
+        .stats-table th {
             vertical-align: middle;
             padding: 12px;
             border-color: var(--border-color);
             color: var(--text-primary);
         }
+
         .stats-table tr:hover td {
             color: #b15fa2;
         }
-        
+
         .back-btn {
             margin-bottom: 20px;
         }
-        
+
         .table {
             margin-bottom: 0;
             color: var(--text-primary);
         }
-        
+
         .player-info-header {
             display: flex;
             align-items: center;
             gap: 24px;
         }
-        
+
         .player-headshot {
             width: 120px;
             height: 180px;
@@ -173,28 +176,28 @@
             border-radius: 12px;
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
         }
-        
+
         .player-name-section {
             flex: 1;
         }
-        
+
         .player-name {
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 8px;
             color: var(--nba-blue);
         }
-        
+
         .player-meta {
             font-size: 16px;
             color: var(--text-secondary);
         }
-        
+
         .player-meta .team {
             font-weight: 600;
             color: var(--nba-blue);
         }
-        
+
         .rating-card {
             display: flex;
             flex-direction: column;
@@ -205,7 +208,7 @@
             background-color: var(--darker-bg);
             box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
         }
-        
+
         .table thead th {
             background-color: var(--darker-bg);
             font-weight: 600;
@@ -215,39 +218,41 @@
             padding: 12px;
             color: var(--text-secondary);
         }
-        
+
         .text-success {
             color: #4caf50 !important;
         }
-        
+
         .text-warning {
             color: #ff9800 !important;
         }
-        
+
         .text-danger {
             color: #f44336 !important;
         }
-        
+
         .text-primary {
             color: #2196f3 !important;
         }
-        
+
         .text-muted {
             color: var(--text-secondary) !important;
         }
-        
+
         strong {
             color: white;
         }
+
         .logo-container {
             text-align: center;
             margin-bottom: 20px;
         }
-        
+
         .logo {
             width: 310px;
             height: auto;
         }
+
         .navbar {
             background-color: var(--card-header);
             color: white;
@@ -277,6 +282,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -291,7 +297,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://hooper-labs.com"><i class="fas fa-flask me-1"></i> HooperLabs</a>
+                        <a class="nav-link" href="https://hooper-labs.com"><i class="fas fa-flask me-1"></i>
+                            HooperLabs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/jclimix/hooperROI" target="_blank"><i
@@ -311,32 +318,31 @@
         <div class="logo-container">
             <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HooperROI Logo" class="logo">
         </div>
-        
+
         <a href="/" class="btn btn-outline-secondary back-btn">
             <i class="fas fa-arrow-left"></i> Back to Search
         </a>
-        
+
         <div class="card">
             <div class="card-header">
                 <h5 class="mb-0">Player Contract Analysis</h5>
             </div>
             <div class="card-body">
                 <div class="player-info-header mb-4">
-                    <img src="https://www.basketball-reference.com/req/202106291/images/headshots/{{ result.player_id }}.jpg" 
-                         alt="{{ result.player_name }}" 
-                         class="player-headshot"
-                         onerror="this.src='https://www.basketball-reference.com/req/202106291/images/headshots/default.jpg'">
-                    
+                    <img src="https://www.basketball-reference.com/req/202106291/images/headshots/{{ result.player_id }}.jpg"
+                        alt="{{ result.player_name }}" class="player-headshot"
+                        onerror="this.src='https://www.basketball-reference.com/req/202106291/images/headshots/default.jpg'">
+
                     <div class="player-name-section">
                         <div class="player-name">{{ result.player_name }}</div>
                         <div class="player-meta">
                             <span class="team">Age: {{ result.age }}<br>
-                            {{ result.team }} | {{ result.season }} Season</span>
+                                {{ result.team }} | {{ result.season }}</span>
                         </div>
                         <div class="mt-3">
                             <div class="d-flex align-items-center mb-2">
                                 <div style="width: 100px; font-weight: 500;">Salary:</div>
-                                <div class="fs-5 fw-bold">{{ result.salary }}</div>
+                                <div class="fs-5 fw-bold" style="margin-left: -38px;">{{ result.salary }}</div>
                             </div>
                             <div class="d-flex align-items-center">
                                 <div style="width: 100px; font-weight: 500;">Win Shares:</div>
@@ -345,7 +351,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="card mb-4">
                     <div class="card-header">
                         <h5 class="mb-0">Contract Value Analysis</h5>
@@ -359,14 +365,13 @@
                                     <div class="rating-stars">
                                         {% set stars = (result.contract_value_rating * 2) | int %}
                                         {% for i in range(5) %}
-                                            {% if i < stars // 2 %}
-                                                <i class="fas fa-star"></i>
+                                        {% if i < stars // 2 %} <i class="fas fa-star"></i>
                                             {% elif i == stars // 2 and stars % 2 == 1 %}
-                                                <i class="fas fa-star-half-alt"></i>
+                                            <i class="fas fa-star-half-alt"></i>
                                             {% else %}
-                                                <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
                                             {% endif %}
-                                        {% endfor %}
+                                            {% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -376,18 +381,18 @@
                                     <div class="stat-value">{{ result.overpay_index }}</div>
                                     <small class="text-muted">
                                         {% if result.overpay_index == 0.0 %}
-                                            <span class="text-primary">No Value</span>
-                                        {% elif result.overpay_index <= 0.5 %}
-                                            <span class="text-success">Significantly Underpaid</span>
-                                        {% elif result.overpay_index <= 0.75 %}
-                                            <span class="text-success">Slightly Underpaid</span>
-                                        {% elif result.overpay_index <= 1.75 %}
-                                            <span class="text-primary">Fair Market Value</span>
-                                        {% elif result.overpay_index <= 3.0 %}
-                                            <span class="text-warning">Slightly Overpaid</span>
-                                        {% else %}
-                                            <span class="text-danger">Significantly Overpaid</span>
-                                        {% endif %}
+                                        <span class="text-primary">No Value</span>
+                                        {% elif result.overpay_index <= 0.5 %} <span class="text-success">Significantly
+                                            Underpaid</span>
+                                            {% elif result.overpay_index <= 0.75 %} <span class="text-success">Slightly
+                                                Underpaid</span>
+                                                {% elif result.overpay_index <= 1.75 %} <span class="text-primary">Fair
+                                                    Market Value</span>
+                                                    {% elif result.overpay_index <= 3.0 %} <span class="text-warning">
+                                                        Slightly Overpaid</span>
+                                                        {% else %}
+                                                        <span class="text-danger">Significantly Overpaid</span>
+                                                        {% endif %}
                                     </small>
                                 </div>
                             </div>
@@ -421,7 +426,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="card mb-4">
@@ -443,112 +448,120 @@
                                             <td class="text-end">{{ result.pergame_stats.games_played|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.games_started is defined %}
                                         <tr>
                                             <td>GS (Games Started)</td>
                                             <td class="text-end">{{ result.pergame_stats.games_started|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.minutes_played is defined %}
                                         <tr>
                                             <td>MPG (Minutes)</td>
                                             <td class="text-end">{{ result.pergame_stats.minutes_played|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.points is defined %}
                                         <tr>
                                             <td>PPG (Points)</td>
                                             <td class="text-end fw-bold">{{ result.pergame_stats.points|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.total_rebounds is defined %}
                                         <tr>
                                             <td>RPG (Rebounds)</td>
                                             <td class="text-end">{{ result.pergame_stats.total_rebounds|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.assists is defined %}
                                         <tr>
                                             <td>APG (Assists)</td>
                                             <td class="text-end">{{ result.pergame_stats.assists|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.steals is defined %}
                                         <tr>
                                             <td>SPG (Steals)</td>
                                             <td class="text-end">{{ result.pergame_stats.steals|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.blocks is defined %}
                                         <tr>
                                             <td>BPG (Blocks)</td>
                                             <td class="text-end">{{ result.pergame_stats.blocks|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.field_goal_pct is defined %}
                                         <tr>
                                             <td>FG% (Field Goal)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.pergame_stats.field_goal_pct|float * 100) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.pergame_stats.field_goal_pct|float * 100) }}%</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.three_point_pct is defined %}
                                         <tr>
                                             <td>3P% (Three Point)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.pergame_stats.three_point_pct|float * 100) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.pergame_stats.three_point_pct|float * 100) }}%</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.two_point_pct is defined %}
                                         <tr>
                                             <td>2P% (Two Point)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.pergame_stats.two_point_pct|float * 100) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.pergame_stats.two_point_pct|float * 100) }}%</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.effective_fg_pct is defined %}
                                         <tr>
                                             <td>eFG% (Effective Field Goal)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.pergame_stats.effective_fg_pct|float * 100) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.pergame_stats.effective_fg_pct|float * 100) }}%
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.free_throw_pct is defined %}
                                         <tr>
                                             <td>FT% (Free Throw)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.pergame_stats.free_throw_pct|float * 100) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.pergame_stats.free_throw_pct|float * 100) }}%</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.offensive_rebounds is defined %}
                                         <tr>
                                             <td>ORPG (Offensive Rebounds)</td>
-                                            <td class="text-end">{{ result.pergame_stats.offensive_rebounds|float }}</td>
+                                            <td class="text-end">{{ result.pergame_stats.offensive_rebounds|float }}
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.defensive_rebounds is defined %}
                                         <tr>
                                             <td>DRPG (Defensive Rebounds)</td>
-                                            <td class="text-end">{{ result.pergame_stats.defensive_rebounds|float }}</td>
+                                            <td class="text-end">{{ result.pergame_stats.defensive_rebounds|float }}
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.turnovers is defined %}
                                         <tr>
                                             <td>TOV (Turnovers)</td>
                                             <td class="text-end">{{ result.pergame_stats.turnovers|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.pergame_stats.personal_fouls is defined %}
                                         <tr>
                                             <td>PF (Personal Fouls)</td>
@@ -560,7 +573,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-6">
                         <div class="card mb-4">
                             <div class="card-header">
@@ -578,140 +591,157 @@
                                         {% if result.adv_stats.player_efficiency_rating is defined %}
                                         <tr>
                                             <td>PER (Player Efficiency Rating)</td>
-                                            <td class="text-end">{{ result.adv_stats.player_efficiency_rating|float }}</td>
+                                            <td class="text-end">{{ result.adv_stats.player_efficiency_rating|float }}
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.true_shooting_pct is defined %}
                                         <tr>
                                             <td>TS% (True Shooting)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.true_shooting_pct|float * 100) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.adv_stats.true_shooting_pct|float * 100) }}%</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.usage_pct is defined %}
                                         <tr>
                                             <td>USG% (Usage Rate)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.usage_pct|float) }}%</td>
+                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.usage_pct|float) }}%
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.box_plus_minus is defined %}
                                         <tr>
                                             <td>BPM (Box Plus/Minus)</td>
                                             <td class="text-end">{{ result.adv_stats.box_plus_minus|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.value_over_replacement_player is defined %}
                                         <tr>
                                             <td>VORP (Value Over Replacement)</td>
-                                            <td class="text-end">{{ result.adv_stats.value_over_replacement_player|float }}</td>
+                                            <td class="text-end">{{ result.adv_stats.value_over_replacement_player|float
+                                                }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.win_shares_per_48 is defined %}
                                         <tr>
                                             <td>WS/48 (Win Shares per 48 min)</td>
                                             <td class="text-end">{{ result.adv_stats.win_shares_per_48|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.offensive_box_plus_minus is defined %}
                                         <tr>
                                             <td>OBPM (Offensive Box Plus/Minus)</td>
-                                            <td class="text-end">{{ result.adv_stats.offensive_box_plus_minus|float }}</td>
+                                            <td class="text-end">{{ result.adv_stats.offensive_box_plus_minus|float }}
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.defensive_box_plus_minus is defined %}
                                         <tr>
                                             <td>DBPM (Defensive Box Plus/Minus)</td>
-                                            <td class="text-end">{{ result.adv_stats.defensive_box_plus_minus|float }}</td>
+                                            <td class="text-end">{{ result.adv_stats.defensive_box_plus_minus|float }}
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.win_shares is defined %}
                                         <tr>
                                             <td>WS (Win Shares)</td>
                                             <td class="text-end">{{ result.adv_stats.win_shares|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.offensive_win_shares is defined %}
                                         <tr>
                                             <td>OWS (Offensive Win Shares)</td>
                                             <td class="text-end">{{ result.adv_stats.offensive_win_shares|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.defensive_win_shares is defined %}
                                         <tr>
                                             <td>DWS (Defensive Win Shares)</td>
                                             <td class="text-end">{{ result.adv_stats.defensive_win_shares|float }}</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.assist_pct is defined %}
                                         <tr>
                                             <td>AST% (Assist Percentage)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.assist_pct|float) }}%</td>
+                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.assist_pct|float) }}%
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.steal_pct is defined %}
                                         <tr>
                                             <td>STL% (Steal Percentage)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.steal_pct|float) }}%</td>
+                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.steal_pct|float) }}%
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.block_pct is defined %}
                                         <tr>
                                             <td>BLK% (Block Percentage)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.block_pct|float) }}%</td>
+                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.block_pct|float) }}%
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.turnover_pct is defined %}
                                         <tr>
                                             <td>TOV% (Turnover Percentage)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.turnover_pct|float) }}%</td>
+                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.turnover_pct|float)
+                                                }}%</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.offensive_rebound_pct is defined %}
                                         <tr>
                                             <td>ORB% (Offensive Rebound %)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.offensive_rebound_pct|float) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.adv_stats.offensive_rebound_pct|float) }}%</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.defensive_rebound_pct is defined %}
                                         <tr>
                                             <td>DRB% (Defensive Rebound %)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.defensive_rebound_pct|float) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.adv_stats.defensive_rebound_pct|float) }}%</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.total_rebound_pct is defined %}
                                         <tr>
                                             <td>TRB% (Total Rebound %)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.total_rebound_pct|float) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.adv_stats.total_rebound_pct|float) }}%</td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.three_point_attempt_rate is defined %}
                                         <tr>
                                             <td>3PAr (Three Point Attempt Rate)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.three_point_attempt_rate|float * 100) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.adv_stats.three_point_attempt_rate|float * 100) }}%
+                                            </td>
                                         </tr>
                                         {% endif %}
-                                        
+
                                         {% if result.adv_stats.free_throw_attempt_rate is defined %}
                                         <tr>
                                             <td>FTAr (Free Throw Attempt Rate)</td>
-                                            <td class="text-end">{{ "%.1f"|format(result.adv_stats.free_throw_attempt_rate|float * 100) }}%</td>
+                                            <td class="text-end">{{
+                                                "%.1f"|format(result.adv_stats.free_throw_attempt_rate|float * 100) }}%
+                                            </td>
                                         </tr>
                                         {% endif %}
                                     </tbody>
@@ -720,7 +750,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="card-header">
                         <h5 class="mb-0">League Context</h5>
@@ -745,13 +775,14 @@
                                 <div class="stat-card">
                                     <p class="stat-label">League Total Wins</p>
                                     <div class="stat-value">{{ result.total_wins }}</div>
-                                    <small class="text-muted">{{ "%.1f"|format(result.total_wins / result.total_teams) }} per team</small>
+                                    <small class="text-muted">{{ "%.1f"|format(result.total_wins / result.total_teams)
+                                        }} per team</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="card mt-4">
                     <div class="card-header">
                         <h5 class="mb-0">Value Assessment</h5>
@@ -760,31 +791,43 @@
                         <div class="row">
                             <div class="col-lg-8">
                                 <p class="mb-3">
-                                    <strong>Contract Evaluation:</strong> 
+                                    <strong>Contract Evaluation:</strong>
                                     {% if result.overpay_index == 0.0 %}
-                                            <span class="text-primary">This is a no-value contract</span>, with the player providing little to no on-court contributions.</span>
-                                    {% elif result.overpay_index <= 0.5 %}
-                                        <span class="text-success">This is an excellent value contract</span>, with the player significantly underpaid relative to their on-court contributions.
-                                    {% elif result.overpay_index <= 0.75 %}
-                                        <span class="text-success">This is a good value contract</span>, with the player underpaid relative to their contributions.
-                                    {% elif result.overpay_index <= 1.75 %}
-                                        <span class="text-primary">This is a fair market value contract</span>, with the player's compensation matching their on-court contributions.
-                                    {% elif result.overpay_index <= 3.0 %}
-                                        <span class="text-warning">This player is overpaid</span>, with compensation exceeding their on-court contributions.
-                                    {% else %}
-                                        <span class="text-danger">This player is significantly overpaid</span>, with compensation far exceeding their on-court contributions.
-                                    {% endif %}
+                                    <span class="text-primary">This is a no-value contract</span>, with the player
+                                    providing little to no on-court contributions.</span>
+                                    {% elif result.overpay_index <= 0.5 %} <span class="text-success">This is an
+                                        excellent value contract</span>, with the player significantly underpaid
+                                        relative to their on-court contributions.
+                                        {% elif result.overpay_index <= 0.75 %} <span class="text-success">This is a
+                                            good value contract</span>, with the player underpaid relative to their
+                                            contributions.
+                                            {% elif result.overpay_index <= 1.75 %} <span class="text-primary">This is a
+                                                fair market value contract</span>, with the player's compensation
+                                                matching their on-court contributions.
+                                                {% elif result.overpay_index <= 3.0 %} <span class="text-warning">This
+                                                    player is overpaid</span>, with compensation exceeding their
+                                                    on-court contributions.
+                                                    {% else %}
+                                                    <span class="text-danger">This player is significantly
+                                                        overpaid</span>, with compensation far exceeding their on-court
+                                                    contributions.
+                                                    {% endif %}
                                 </p>
                                 <p>
-                                    <strong>Win Share Value:</strong> Based on the league average cost per win share of <strong>{{ result.nba_avg_salary_per_ws_short }}</strong>, 
-                                    {{ result.player_name }}'s contribution of <strong>{{ result.win_shares }}</strong> win shares has a market value that can be calculated by the analysis.
+                                    <strong>Win Share Value:</strong> Based on the league average cost per win share of
+                                    <strong>{{ result.nba_avg_salary_per_ws_short }}</strong>,
+                                    {{ result.player_name }}'s contribution of <strong>{{ result.win_shares }}</strong>
+                                    win shares has a market value that can be calculated by the analysis.
                                 </p>
                                 <p>
-                                    <strong>Salary Reality:</strong> {{ result.player_name }}'s actual salary of <strong>{{ result.salary_short }}</strong> means the team is 
+                                    <strong>Salary Reality:</strong> {{ result.player_name }}'s actual salary of
+                                    <strong>{{ result.salary_short }}</strong> means the team is
                                     {% if result.overpay_index > 1.0 %}
-                                        paying {{ "%.1f"|format((result.overpay_index-1)*100) }}% above market value for their performance.
+                                    paying {{ "%.1f"|format((result.overpay_index-1)*100) }}% above market value for
+                                    their performance.
                                     {% else %}
-                                        getting a {{ "%.1f"|format((1-result.overpay_index)*100) }}% discount on market value for their performance.
+                                    getting a {{ "%.1f"|format((1-result.overpay_index)*100) }}% discount on market
+                                    value for their performance.
                                     {% endif %}
                                 </p>
                             </div>
@@ -795,14 +838,13 @@
                                     <div class="rating-stars mb-3">
                                         {% set stars = (result.contract_value_rating * 2) | int %}
                                         {% for i in range(5) %}
-                                            {% if i < stars // 2 %}
-                                                <i class="fas fa-star"></i>
+                                        {% if i < stars // 2 %} <i class="fas fa-star"></i>
                                             {% elif i == stars // 2 and stars % 2 == 1 %}
-                                                <i class="fas fa-star-half-alt"></i>
+                                            <i class="fas fa-star-half-alt"></i>
                                             {% else %}
-                                                <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
                                             {% endif %}
-                                        {% endfor %}
+                                            {% endfor %}
                                     </div>
                                     <div class="text-center text-muted">
                                         Scale: 0-10
@@ -823,4 +865,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
